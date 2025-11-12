@@ -1,9 +1,3 @@
-def move_zeros(lst):
-    zero_count = lst.count(0)
-    non_zero = [x for x in lst if x != 0]
-    return non_zero + [0] * zero_count
-
-
 examples = [
     [0, 1, 0, 12, 3],
     [0],
@@ -12,4 +6,7 @@ examples = [
 ]
 
 for lst in examples:
-    print(lst, "->", move_zeros(lst))
+    zero_count = lst.count(0)
+    non_zero = [x for x in lst if x != 0]
+    result = non_zero + [0] * zero_count
+    print(lst, "->", result)
