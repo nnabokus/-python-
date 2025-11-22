@@ -1,4 +1,4 @@
-seconds = int(input("Введіть будь-ласка число:"))
+seconds = int(input("Введіть будь-ласка число: "))
 
 day_sec = 24 * 60 * 60
 
@@ -11,9 +11,15 @@ seconds = seconds % 3600
 minutes = seconds // 60
 secs = seconds % 60
 
-if days == 1:
+# Визначення правильного слова
+last_two = days % 100
+last_one = days % 10
+
+if 11 <= last_two <= 14:
+    day_word = "Днів"
+elif last_one == 1:
     day_word = "День"
-elif 2 <= days <= 4:
+elif 2 <= last_one <= 4:
     day_word = "Дні"
 else:
     day_word = "Днів"
